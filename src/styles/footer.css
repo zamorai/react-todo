@@ -1,0 +1,9 @@
+.custom-trash:hover{
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translate(0, 2px);
+ }
+} 

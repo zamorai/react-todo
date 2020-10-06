@@ -4,8 +4,14 @@
 }
 
 .custom-button:hover{
-  transform: scale(1.05);
+  transform: scale(1.03);
   color: black;
+  box-shadow: 0 1px 0.4rem rgba(255, 255, 255, 0.582); 
+}
+
+.custom-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0.4rem rgba(255, 255, 255, 0.411); 
 }
 
 .custom-button::before{

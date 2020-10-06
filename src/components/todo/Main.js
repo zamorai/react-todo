@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 export default function Main() {
 
-  const[todo, setTodo] = useState([{id: 1, todo: 'iker is great'}]);
+  const[todo, setTodo] = useState([]);
   const[completed, setCompleted] = useState([])
 
   const handleSubmit = (item) => {

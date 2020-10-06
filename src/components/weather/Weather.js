@@ -11,10 +11,10 @@ export default function Weather() {
   const renderItems = () => {
     if(weather.name) {
       return ( 
-      <div className='border border-gray-100 px-8 py-4'>
-        <span>Weather for: {weather.name}</span>
+      <div className='border border-gray-100 px-8 py-4 divide-y divide-gray-200'>
+        <span className='flex justify-center font-bold mb-2'>Weather for: {weather.name}</span>
         <div className="lg:flex lg:flex-col">
-          <span>Temperature: {weather.main.temp}</span>
+          <span className='mt-2'>Temperature: {weather.main.temp}</span>
           <span> Feels Like: {weather.main.feels_like} </span>
           <span> How's Outside: {weather.weather[0].description}</span>
         </div>
