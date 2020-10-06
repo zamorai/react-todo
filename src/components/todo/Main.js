@@ -24,7 +24,7 @@ export default function Main() {
   const bundleDelete = () => {
     var newList = todo.filter(itemz => {
       return !completed.some(itemx => {
-        return itemz.id == itemx.id
+        return itemz.id === itemx.id
       }); 
     })
     setTodo(newList);

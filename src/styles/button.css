@@ -1,0 +1,26 @@
+.custom-button {
+  transition: all 0.2s;
+  position: relative;
+}
+
+.custom-button:hover{
+  transform: scale(1.05);
+  color: black;
+}
+
+.custom-button::before{
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 0;
+  background-color: rgb(4, 45, 58);
+  width: 100%;
+  transition: height 0.3s, background-color 0.9s; 
+  z-index: -1; 
+}
+ 
+.custom-button:hover::before {
+  height: 100%;
+  background-color: rgb(236, 236, 236);
+}
