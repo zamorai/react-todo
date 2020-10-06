@@ -31,7 +31,10 @@ export default function Header(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.handleSubmit(todo);
+    setTodo(todo.trim())
+    if(todo.length > 0) {
+      props.handleSubmit(todo);
+    }
     setTodo("");
   }
 
@@ -48,18 +51,14 @@ export default function Header(props) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <Modal isOpen={modalOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example">
-          <svg onClick={closeModal} className="h-4 w-4 absolute top-0 right-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="red">
+          <svg onClick={closeModal} className="h-4 w-4 mt-1 mr-1 absolute top-0 right-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="red">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
-            <div>I am a modal</div>
-            <form> 
-              <input />
-              <button>tab navigation</button>
-              <button>stays</button>
-              <button>inside</button>
-              <button>the modal</button>
-            </form>
-        </Modal>
+          <span className="text-lg font-light flex items-center justify-center mb-8">Example Modal</span>
+          <div className='flex flex-col justify-center items-center'>
+            <span className='text-2xl font-light'>Just go to the main page tomorrow and find out!</span>
+          </div>
+        </Modal> 
       </div>
     </div>
   ) 
