@@ -6,7 +6,7 @@ import '../styles/app.css';
 export default function App() {
   return (
     <div className='grid grid-cols-1 lg:grid-cols-4'> 
-      <div className='col-span-1 bg-blue-900 custom-bg'>
+      <div className='col-span-1 bg-blue-900 custom-bg h-24 lg:h-full'>
         <Weather/>
       </div>
       <div className='relative col-span-3 bg-gray-300 h-screen custom-main'>

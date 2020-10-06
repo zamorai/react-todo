@@ -1,0 +1,9 @@
+.input-custom {
+  width: 75%;
+  transition: all 0.3s; 
+} 
+
+.input-custom:focus {
+  width: 80%; 
+}
+

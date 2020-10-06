@@ -1,11 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const KEY = '2056d6993c7c0cb16f8af096ff38cb93';
 
 export default function Button() {
+  const[weather, setWeather] = useState({});
+  const[lat, setLat] = useState(null);
+  const[long, setLong] = useState(null);
+
+  const getWeather = async () => {
+    navigator.geolocation.getCurrentPosition(position=>{
+      setLat(position.coords.latitude);
+      setLong(position.coords.longitude);
+    });
+    
+  }
+
+  useEffect(() => {
+    const weather = async () => {
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=2056d6993c7c0cb16f8af096ff38cb93`);
+      setWeather(response.data)
+    }
+    if(lat && long) {
+      weather();
+    }
+
+  }, [lat,long])
+
   return (
     <div>
-      <svg className='w-6 h-6' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+      <button onClick={getWeather} className='px-3 py-1 border border-blue-800 rounded lg:mt-24'>Click me</button>
+      
     </div>
   )
 }
