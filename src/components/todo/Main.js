@@ -43,10 +43,10 @@ export default function Main() {
   }
 
   return (
-    <div>
+    <React.Fragment>
       <Header handleSubmit={handleSubmit}/>
       <TodoList completedDelete={completedDelete} handleCompleted={handleCompleted} handleDelete={handleDelete} todo={todo} />
       <Footer bundleDelete={bundleDelete} todo={todo}  />
-    </div>
+    </React.Fragment>
   )
 }

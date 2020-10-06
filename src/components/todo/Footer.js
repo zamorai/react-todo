@@ -4,7 +4,7 @@ import '../../styles/footer.css';
 export default function Footer(props) {
 
   return (
-    <div className='absolute bottom-0 left-0 h-12 bg-gray-100 w-full flex justify-between items-center shadow-inner'> 
+    <div className='absolute bottom-0 left-0 left-0 h-12 bg-gray-100 w-full flex justify-between items-center shadow-inner'> 
       <div/>
       <div className='ml-48'>
       {props.todo.length} left

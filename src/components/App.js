@@ -9,7 +9,7 @@ export default function App() {
       <div className='col-span-1 bg-blue-900 custom-bg h-24 lg:h-full'>
         <Weather/>
       </div>
-      <div className='relative col-span-3 bg-gray-300 h-screen custom-main'>
+      <div className='relative col-span-3 bg-gray-300 h-screen overflow-y-scroll custom-main'>
         <Main/>
       </div>
     </div>

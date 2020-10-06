@@ -11,5 +11,5 @@ export default function TodoList(props) {
     <div className='divide-y divide-gray-200'>
       {renderedItems} 
     </div>
-  )
+  ) 
 }

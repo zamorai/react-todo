@@ -39,7 +39,7 @@ export default function Header(props) {
   }
 
   return (
-    <div className='w-full h-12 bg-gray-200 flex justify-between items-center shadow'>  
+    <div className='w-full h-12 bg-gray-200 flex justify-between items-center shadow sticky top-0'>  
       <div className='ml-6'>
         Priority
       </div>
