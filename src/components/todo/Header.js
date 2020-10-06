@@ -50,7 +50,7 @@ export default function Header(props) {
         <svg className='h-6 w-6 cursor-pointer' onClick={openModal} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
-        <Modal isOpen={modalOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example">
+        <Modal closeTimeoutMS={500} isOpen={modalOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example">
           <svg onClick={closeModal} className="h-4 w-4 mt-1 mr-1 absolute top-0 right-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="red">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
