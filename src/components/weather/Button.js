@@ -8,7 +8,7 @@ export default function Button(props) {
   const[long, setLong] = useState(null);
   const[spin, setSpin] = useState(false);
 
-  const useWeather = async () => {
+  const useWeather = () => {
     navigator.geolocation.getCurrentPosition(position=>{
       setLat(position.coords.latitude);
       setLong(position.coords.longitude);

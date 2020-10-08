@@ -44,7 +44,7 @@ export default function Header(props) {
   return (
     <div className='w-full h-12 bg-gray-200 flex justify-between items-center shadow sticky top-0'>  
       <div className='ml-6'>
-        Priority
+        Important
       </div>
       <form className ='flex-grow flex justify-center' onSubmit = {handleSubmit}> 
         <input className="px-2 py-1 rounded input-custom outline-none" onChange={(e) => setTodo(e.target.value)} value={todo} type='text' placeholder='Enter your todo'></input>
@@ -75,5 +75,5 @@ export default function Header(props) {
         </Modal> 
       </div>
     </div>
-  ) 
+  )  
 }
