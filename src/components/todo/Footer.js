@@ -4,9 +4,9 @@ import '../../styles/footer.css';
 export default function Footer(props) {
 
   return (
-    <div className='fixed bottom-0 h-12 bg-gray-100 w-full lg:w-3/4 flex justify-between items-center shadow-inner'> 
-      <div/>
-      <div className='ml-48'>
+    <div className='fixed bottom-0 h-12 bg-gray-100 w-full lg:w-3/4 flex justify-between lg:justify-between items-center shadow-inner'> 
+      <div className='display-none lg:display-inline'></div>
+      <div className='mr-auto ml-6 lg:ml-48 lg:mr-0'>
       {props.todo.length} left
       </div>
       <div className='flex items-center'> 
